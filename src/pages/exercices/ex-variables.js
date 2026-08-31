@@ -1,5 +1,8 @@
 console.log("---------Exercices variables---------")
 
+let h1 = document.querySelector('h1')
+h1.classList.add('text-primary')
+
 let myAge = 10
 console.log(myAge)
 
@@ -19,7 +22,7 @@ let myObject = {
 console.log(myObject.name, myObject.age)
 
 let helloWorld = ()=>{
-   return "Hello World"
+    return "Hello World"
 }
 
 console.log(helloWorld())
