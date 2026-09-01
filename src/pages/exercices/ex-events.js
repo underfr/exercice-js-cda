@@ -27,3 +27,15 @@ document.body.addEventListener('mouseleave', ()=>{
 document.body.addEventListener('mouseenter', ()=>{
     scam.style.display = "none"
 })
+
+let spyInput = document.getElementById('spy')
+let spyParagraph = document.getElementById('spy-text')
+let pressed = []
+spyInput.addEventListener('keydown', (e) => {
+
+    if (e.key.length === 1) {
+        pressed.push(e.key)
+    }
+
+    spyParagraph.textContent = pressed.join('')
+})
