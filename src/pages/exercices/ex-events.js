@@ -18,3 +18,12 @@ btnToggle.addEventListener('click', ()=>{
         title.classList.add('bg-accent')
     }
 })
+
+let scam = document.getElementById('scam')
+
+document.body.addEventListener('mouseleave', ()=>{
+    scam.style.display = "block"
+})
+document.body.addEventListener('mouseenter', ()=>{
+    scam.style.display = "none"
+})
