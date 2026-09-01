@@ -30,12 +30,16 @@ document.body.addEventListener('mouseenter', ()=>{
 
 let spyInput = document.getElementById('spy')
 let spyParagraph = document.getElementById('spy-text')
-let pressed = []
 spyInput.addEventListener('keydown', (e) => {
+    spyParagraph.textContent = spyInput.value
+})
 
-    if (e.key.length === 1) {
-        pressed.push(e.key)
+let spyTextArea = document.getElementById('spy-area')
+let spySubmit = document.getElementById('spy-submit')
+
+spyTextArea.addEventListener('keydown', (e)=>{
+
+    if (spyTextArea.value.length > 5){
+        spySubmit.disabled = 'true'
     }
-
-    spyParagraph.textContent = pressed.join('')
 })
