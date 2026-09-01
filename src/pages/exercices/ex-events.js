@@ -30,16 +30,27 @@ document.body.addEventListener('mouseenter', ()=>{
 
 let spyInput = document.getElementById('spy')
 let spyParagraph = document.getElementById('spy-text')
-spyInput.addEventListener('keydown', (e) => {
+spyInput.addEventListener('keyup', (e) => {
     spyParagraph.textContent = spyInput.value
 })
 
 let spyTextArea = document.getElementById('spy-area')
 let spySubmit = document.getElementById('spy-submit')
 
-spyTextArea.addEventListener('keydown', (e)=>{
+spyTextArea.addEventListener('keyup', (e)=>{
 
     if (spyTextArea.value.length > 5){
         spySubmit.disabled = 'true'
     }
+
 })
+
+let localTextArea = document.getElementById('local-textarea')
+let localText = document.getElementById('local-text')
+
+localTextArea.addEventListener('keyup', ()=>{
+    localStorage.setItem('myText', localTextArea.value)
+})
+
+localText.textContent = localStorage.getItem('myText')
+localTextArea.value = localStorage.getItem('myText')
