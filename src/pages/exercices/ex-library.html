@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Demo Libraries</title>
+
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+</head>
+
+<body class="bg-base-200 min-h-screen">
+
+<!-- NAVBAR -->
+<nav class="navbar bg-base-100 shadow-sm px-6">
+
+    <div class="flex-1">
+        <a href="/" class="text-2xl font-bold">
+            JS Learning
+        </a>
+    </div>
+
+    <div class="flex-none">
+        <ul id="navigation" class="menu menu-horizontal px-1">
+            <!-- Généré automatiquement -->
+        </ul>
+    </div>
+
+</nav>
+
+<!-- Contenu -->
+<main class="max-w-6xl mx-auto p-6">
+
+    <div class="mb-8">
+        <h1 class="text-4xl font-bold">
+            Démonstration des librairies
+        </h1>
+
+        <p class="text-base-content/60 mt-2">
+            UUID + Leaflet + DaisyUI
+        </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+        <!-- UUID -->
+        <div class="card bg-base-100 shadow-xl">
+            <div class="card-body">
+
+                <h2 class="card-title">
+                    UUID
+                    <div class="badge badge-secondary">
+                        uuid
+                    </div>
+                </h2>
+
+                <p class="text-base-content/60">
+                    Génère un identifiant UUID v4 aléatoire.
+                </p>
+
+                <div class="bg-base-200 rounded-lg p-4 my-4">
+                    <code
+                            id="uuid"
+                            class="break-all text-sm"
+                    >
+                        Cliquez sur générer
+                    </code>
+                </div>
+
+                <div class="card-actions justify-end">
+                    <button
+                            id="generateUuid"
+                            class="btn btn-primary"
+                    >
+                        Générer un UUID
+                    </button>
+
+                    <button
+                            id="copyUuid"
+                            class="btn btn-outline"
+                    >
+                        Copier
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- Leaflet -->
+        <div class="card bg-base-100 shadow-xl lg:col-span-2">
+            <div class="card-body">
+
+                <div class="flex items-center justify-between">
+                    <div>
+                        <h2 class="card-title">
+                            Leaflet
+                            <div class="badge badge-accent">
+                                Map
+                            </div>
+                        </h2>
+
+                        <p class="text-base-content/60">
+                            Carte interactive avec OpenStreetMap.
+                        </p>
+                    </div>
+
+                    <button
+                            id="resetMap"
+                            class="btn btn-sm btn-outline"
+                    >
+                        Recentrer
+                    </button>
+                </div>
+
+                <div
+                        id="map"
+                        class="w-full h-[450px] rounded-xl overflow-hidden mt-4"
+                ></div>
+
+            </div>
+        </div>
+
+    </div>
+
+</main>
+
+<script type="module" src="/src/main.js"></script>
+<script src="ex-library.js" type="module"></script>
+
+</body>
+</html>

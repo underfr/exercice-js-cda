@@ -1,60 +1,158 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>js</title>
-  </head>
-  <body>
-  <div class="hover-3d">
-    <!-- content -->
-    <figure class="w-60 rounded-2xl">
-      <img src="https://img.daisyui.com/images/stock/card-1.webp?x" alt="Tailwind CSS 3D card" />
-    </figure>
-    <!-- 8 empty divs needed for the 3D effect -->
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>JS Learning</title>
+</head>
+
+<body class="bg-base-200 min-h-screen">
+
+<!-- NAVBAR -->
+<nav class="navbar bg-base-100 shadow-sm px-6">
+
+  <div class="flex-1">
+    <a href="/" class="text-2xl font-bold">
+      JS Learning
+    </a>
   </div>
 
-  <div class="hover-3d">
-    <!-- content -->
-    <figure class="w-60 rounded-2xl">
-      <img src="https://img.daisyui.com/images/stock/card-2.webp?x" alt="Tailwind CSS 3D hover" />
-    </figure>
-    <!-- 8 empty divs needed for the 3D effect -->
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
+  <div class="flex-none">
+    <ul id="navigation" class="menu menu-horizontal px-1">
+      <!-- Les pages seront ajoutées automatiquement -->
+    </ul>
   </div>
 
-  <div class="hover-3d">
-    <!-- content -->
-    <figure class="w-60 rounded-2xl">
-      <img src="https://img.daisyui.com/images/stock/card-3.webp?x" alt="Tailwind CSS 3D hover" />
-    </figure>
-    <!-- 8 empty divs needed for the 3D effect -->
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+</nav>
+
+
+<!-- HERO -->
+<main>
+
+  <section class="hero min-h-[70vh]">
+    <div class="hero-content text-center">
+
+      <div class="max-w-2xl">
+
+        <div class="badge badge-primary mb-4">
+          JavaScript
+        </div>
+
+        <h1 class="text-5xl font-bold">
+          JavaScript Learning
+        </h1>
+
+        <p class="py-6 text-base-content/70">
+          Une collection de cours et d'exercices
+          pour apprendre et expérimenter JavaScript.
+        </p>
+
+        <div class="flex justify-center gap-3">
+
+          <a
+                  href="#lessons"
+                  class="btn btn-primary"
+          >
+            Voir les cours
+          </a>
+
+          <a
+                  href="#exercises"
+                  class="btn btn-outline"
+          >
+            Voir les exercices
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- SECTIONS -->
+  <section class="max-w-6xl mx-auto px-6 pb-16">
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+      <!-- LESSONS -->
+      <div
+              id="lessons"
+              class="card bg-base-100 shadow-xl"
+      >
+        <div class="card-body">
+
+          <div class="flex items-center justify-between">
+
+            <h2 class="card-title">
+              Lessons
+            </h2>
+
+            <div class="badge badge-primary">
+              Cours
+            </div>
+
+          </div>
+
+          <p class="text-base-content/60">
+            Découvre les différents cours JavaScript.
+          </p>
+
+          <div id="lessons-list" class="mt-4">
+            <!-- Généré par JS -->
+          </div>
+
+        </div>
+      </div>
+
+
+      <!-- EXERCICES -->
+      <div
+              id="exercises"
+              class="card bg-base-100 shadow-xl"
+      >
+        <div class="card-body">
+
+          <div class="flex items-center justify-between">
+
+            <h2 class="card-title">
+              Exercices
+            </h2>
+
+            <div class="badge badge-secondary">
+              Pratique
+            </div>
+
+          </div>
+
+          <p class="text-base-content/60">
+            Mets tes connaissances en pratique.
+          </p>
+
+          <div id="exercises-list" class="mt-4">
+            <!-- Généré par JS -->
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+<footer class="footer footer-center bg-base-300 text-base-content p-6">
+  <aside>
+    <p>JS Learning — JavaScript exercises & lessons</p>
+  </aside>
+</footer>
+
+
+<script type="module" src="/src/main.js"></script>
+
+</body>
 </html>
